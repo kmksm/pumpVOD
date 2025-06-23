@@ -20,8 +20,7 @@ async def main():
     args = vars(parser.parse_args())
 
     # Clip URL
-    # clip_url_string = args.get("clip_url")
-    clip_url_string = "https://pump.fun/coin/EDkDcWMPCgP4CAT8JQjd2oeF4TN9akBU21xA8q29pump?clip=20250621_040137%3A328832_20250621_040133"
+    clip_url_string = args.get("clip_url")
 
     while True:
         if clip_url_string is None:
