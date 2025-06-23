@@ -32,6 +32,7 @@ async def download_segments(
     :param concurrency: Maximum number of concurrent downloads allowed.
     :return: A list of `Segment` objects representing the downloaded segments.
     """
+
     async def _download_segment(
         idx: int, session: requests.AsyncSession, segment: Segment
     ) -> requests.Response | CacheExists:

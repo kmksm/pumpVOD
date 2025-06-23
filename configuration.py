@@ -1,7 +1,12 @@
+import sys
 from dotenv import dotenv_values
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).parent
+elif __file__:
+    BASE_DIR = Path(__file__).parent
+
 TRUE_VALUES = {"1", "true", "t", "y", "yes"}
 CONSOLE_LOG_LEVEL = "INFO"
 
